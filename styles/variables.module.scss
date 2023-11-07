@@ -1,5 +1,11 @@
 @import './mixins';
-$color-primary: blue;
+// COLOURS
+$color-primary: rgb(81, 81, 204);
+$font-color: rgb(255, 255, 255);
+
+//FONTS
+$titleFont : Arial, Helvetica, sans-serif;
+$bodyFont : 'Times New Roman', Times, serif;
 
 .title1{
   color: $color-primary;
@@ -13,4 +19,16 @@ $color-primary: blue;
   .title1{
     background-color: chartreuse;
   }
+}
+
+
+// Mixins
+@mixin buttonStyle ($bgColor, $fontSize) {
+  height: 40px;
+  width: 200px;
+  background-color: $bgColor;
+  border: none;
+  border-radius: 8px;
+  color: $font-color;
+  font-size: $fontSize;
 }
